@@ -1,25 +1,48 @@
-/* Example of comment in CSS */
+/* Example CSS comment */
+:root {
+    /* Colors */
+    --primary-color: rgb(116, 3, 3);
+    --white: white;
+    --black: black;
+    --gray: gray;
+    --light-gray: #eee;
+    --dark-gray: #333;
+    --border-color: rgba(0, 0, 0, 0.2);
+    
+    /* Sizes */
+    --standard-image-width: 150px;
+    --large-image-width: 200px;
+    --main-content-width: 840px;
+    --aside-width: 20rem;
+    
+    /* Spacing */
+    --small-padding: 10px;
+    --medium-padding: 20px;
+    --standard-margin: 1rem;
+    --footer-margin: 15px;
+}
+
 nav {
-    background-color: rgb(116, 3, 3);
-    padding: 10px;
+    background-color: var(--primary-color);
+    padding: var(--small-padding);
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     display: block;
-    padding: 20px;
+    padding: var(--medium-padding);
 }
 
 h1 {
-    color: rgb(116, 3, 3);
+    color: var(--primary-color);
 }
 
 img {
-    width: 150px;
+    width: var(--standard-image-width);
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--black);
     padding: 2px;
-    box-shadow: 0 0 30px gray;
+    box-shadow: 0 0 30px var(--gray);
 }
 
 p {
@@ -27,31 +50,31 @@ p {
 }
 
 main {
-    max-width: 840px;
+    max-width: var(--main-content-width);
 }
 
 main img {
-    width: 150px;
+    width: var(--standard-image-width);
     height: auto;
 }
 
 aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2); /* 1 */
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    width: var(--aside-width);
+    margin: var(--standard-margin);
+    border: 1px solid var(--border-color);
+    padding: var(--standard-margin);
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
     text-align: center;
 }
 
 aside img {
-    width: 200px;
+    width: var(--large-image-width);
     height: auto;
 }
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
+    margin-top: var(--footer-margin);
+    border-top: 1px solid var(--black);
     text-align: center;
 }
