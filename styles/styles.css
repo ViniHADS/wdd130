@@ -1,16 +1,23 @@
-/* Example CSS comment */
+/* CSS Variables and Base Styles */
 :root {
     /* Colors */
-    --primary-color: rgb(116, 3, 3);
-    --white: white;
-    --black: black;
-    --gray: gray;
-    --light-gray: #eee;
-    --dark-gray: #333;
+    --primary-color: #740303;
+    --primary-color-light: #181717;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #808080;
+    --light-gray: #eeeeee;
+    --dark-gray: #333333;
     --border-color: rgba(0, 0, 0, 0.2);
     
+    /* Typography */
+    --main-font: Arial, sans-serif;
+    --heading-color: var(--primary-color);
+    --text-color: var(--black);
+    --link-color: var(--white);
+    
     /* Sizes */
-    --standard-image-width: 150px;
+    --standard-image-width: 200px;
     --large-image-width: 200px;
     --main-content-width: 840px;
     --aside-width: 20rem;
@@ -20,52 +27,84 @@
     --medium-padding: 20px;
     --standard-margin: 1rem;
     --footer-margin: 15px;
+    
+    /* Effects */
+    --box-shadow: 0 0 30px var(--gray);
+    --border-style: 1px solid;
 }
 
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+/* Navigation */
 nav {
     background-color: var(--primary-color);
     padding: var(--small-padding);
 }
 
 nav a {
-    color: var(--white);
+    color: var(--link-color);
     display: block;
     padding: var(--medium-padding);
+    text-decoration: none;
 }
 
+nav a:hover {
+    background-color: var(--primary-color-light);
+}
+
+/* Typography */
 h1 {
-    color: var(--primary-color);
-}
-
-img {
-    width: var(--standard-image-width);
-    height: auto;
-    border: 1px solid var(--black);
-    padding: 2px;
-    box-shadow: 0 0 30px var(--gray);
+    color: var(--heading-color);
+    margin-bottom: var(--standard-margin);
 }
 
 p {
-    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: var(--small-padding);
 }
 
+/* Images */
+img {
+    width: var(--standard-image-width);
+    height: auto;
+    border: var(--border-style) var(--black);
+    padding: 2px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Main Content */
 main {
     max-width: var(--main-content-width);
+    padding: var(--medium-padding);
+    margin: 0 auto;
 }
 
 main img {
     width: var(--standard-image-width);
     height: auto;
+    float: right;
+    margin-left: var(--standard-margin);
 }
 
+/* Aside */
 aside {
     width: var(--aside-width);
     margin: var(--standard-margin);
-    border: 1px solid var(--border-color);
+    border: var(--border-style) var(--border-color);
     padding: var(--standard-margin);
     background-color: var(--light-gray);
     color: var(--dark-gray);
     text-align: center;
+    position: relative;
+    top: auto;
+    left: auto;
 }
 
 aside img {
@@ -73,8 +112,20 @@ aside img {
     height: auto;
 }
 
+/* Footer */
 footer {
     margin-top: var(--footer-margin);
-    border-top: 1px solid var(--black);
+    border-top: var(--border-style) var(--black);
     text-align: center;
+    padding: var(--medium-padding);
+    background-color: var(--light-gray);
+}
+
+/* Box Component */
+.box {
+    margin: var(--standard-margin);
+    border: var(--border-style) var(--primary-color);
+    padding: var(--standard-margin);
+    background-color: var(--primary-color);
+    color: var(--white);    
 }
