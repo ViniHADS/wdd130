@@ -1,8 +1,8 @@
-/* CSS Variables and Base Styles */
+/* /* Class Selector */
 :root {
     /* Colors */
-    --primary-color: #740303;
-    --primary-color-light: #181717;
+    --primary-color: #3f0b70;
+    --primary-color-light: #8b77d5;
     --white: #ffffff;
     --black: #000000;
     --gray: #808080;
@@ -120,6 +120,11 @@ footer {
     padding: var(--medium-padding);
     background-color: var(--light-gray);
 }
+/* 
+====================================
+Class Selectors
+====================================
+*/
 
 /* Box Component */
 .box {
