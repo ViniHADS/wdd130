@@ -133,11 +133,8 @@ footer {
     background-color: var(--light-gray);
 }
 
-/* 
-====================================
-Class Selectors
-====================================
-*/
+/*Class Selectors*/
+
 .box {
     margin: 1rem;
     border: var(--border-style) var(--primary-color);
