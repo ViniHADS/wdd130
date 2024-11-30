@@ -1,4 +1,4 @@
-/* /* Class Selector */
+/* Root Variables */
 :root {
     /* Colors */
     --primary-color: #3f0b70;
@@ -110,6 +110,18 @@ aside {
 aside img {
     width: var(--large-image-width);
     height: auto;
+    position: relative;
+}
+
+aside h2 {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    padding: 10px;
+    z-index: 10;
 }
 
 /* Footer */
@@ -120,17 +132,16 @@ footer {
     padding: var(--medium-padding);
     background-color: var(--light-gray);
 }
+
 /* 
 ====================================
 Class Selectors
 ====================================
 */
-
-/* Box Component */
 .box {
-    margin: var(--standard-margin);
+    margin: 1rem;
     border: var(--border-style) var(--primary-color);
-    padding: var(--standard-margin);
+    padding: 1rem;
     background-color: var(--primary-color);
-    color: var(--white);    
+    color: var(--white);
 }
