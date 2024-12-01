@@ -18,6 +18,12 @@ body {
 
 /* Header Styles */
 header {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 120px 1fr 2fr;
+    align-items: center;
+    border-bottom: 1px solid #13629f;
+    max-width: 1000px;
     background-color: #13629f;
     padding: 20px;
     display: flex;
@@ -27,25 +33,30 @@ header {
 }
 
 .logo {
+    margin: 0 0.25rem 0 1rem;
     width: 175px;
     height: auto;
 }
 
 nav {
+    text-align: right;
     display: flex;
     gap: 20px;
 }
 
 nav a {
+    display: block;
     text-decoration: none;
     color: black;
     font-weight: 400;
-    padding: 5px 10px;
+    padding: 20px;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #0066cc;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 /* Hero Section Styles */
@@ -112,7 +123,7 @@ nav a:hover {
 article {
     position: relative;
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px;
+    padding: 150px;
     margin: 0 auto 40px;
     border-radius: 5px;
     max-width: 1400px;
@@ -120,7 +131,7 @@ article {
 
 article img.client-img {
     float: right;
-    width: 400px;
+    width: 350px;
     height: auto;
     border-radius: 5px;
     margin: 0 0 20px 20px;
@@ -154,6 +165,35 @@ section p {
 /* History Section Specific */
 .history {
     background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.history-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.history-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: justify;
+}
+
+.history-row p {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 10px;
+}
+
+.history-img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 /* Adventure Section Specific */
@@ -166,6 +206,42 @@ section p {
     height: auto;
     border-radius: 5px;
     margin: 10px;
+}
+
+/* Adventure Gallery Styling */
+.adventure-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Ensures it wraps if there isn't enough space */
+    gap: 20px;
+    justify-content: center; /* Centers the gallery */
+    padding-top: 20px;
+}
+
+.adventure-gallery figure {
+    flex: 1; /* Allows flexible size adjustment for each figure */
+    max-width: 300px; /* Restricts the max size for each image */
+    text-align: center;
+    margin: 0; /* Removes default margin for figures */
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adventure-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.adventure-gallery figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
 }
 
 /* Footer Styles */
