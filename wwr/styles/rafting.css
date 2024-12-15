@@ -257,7 +257,7 @@ footer {
 }
 
 footer p {
-    color: #333;
+    color: #000000;
 }
 
 .social-links {
@@ -280,12 +280,12 @@ footer p {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .hero-box {
         flex-direction: column;
-        left: 20px;
-        right: 20px;
-        bottom: 20px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
     }
 
     .hero h1 {
@@ -319,4 +319,240 @@ footer p {
     .hero {
         height: 400px;
     }
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 800px;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter-form input, .newsletter-form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    background-color: #13629f;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #13629f;
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: #13629f;
+    color: red;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f90;
+}
+
+.cta p {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e68a00;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #13629f;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff9900;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #444;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #13629f;
+    color: #fff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.cta {
+    text-align: center;
+    padding: 2rem;
+    background: #13629f;
+}
+
+.cta p {
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: #ff9900;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.trips {
+    padding: 2rem;
+    color:rgb(255, 255, 255);
+    background-color: #82d0e7;
+}
+
+.trips h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ff9900;
+    background-color: #13629f;
+}
+
+/* Grid Layout for Trips */
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.trip {
+    border: 1px solid #ff9900;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #13629f;
+    transition: transform 0.3s ease;
+    background: #13629f;
+}
+
+.trip:hover {
+    transform: translateY(-5px);
+}
+
+.trip img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trip-details {
+    padding: 1rem;
+}
+
+.trip-details h3 {
+    margin: 0 0 0.5rem;
+}
+
+.trip-details ul {
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 0;
+}
+
+.trip-details ul li {
+    margin: 0.5rem 0;
+}
+
+.trip-details p {
+    color: white;
 }
